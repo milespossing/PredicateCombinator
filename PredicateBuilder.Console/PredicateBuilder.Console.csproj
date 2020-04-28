@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\PredicateBuilder.Core\PredicateBuilder.Core.csproj" />
+      <ProjectReference Include="..\PredicateCombinator\PredicateCombinator.csproj" />
     </ItemGroup>
 
 </Project>
