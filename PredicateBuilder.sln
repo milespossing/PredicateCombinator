@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateBuilder.Console", "PredicateBuilder.Console\PredicateBuilder.Console.csproj", "{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateBuilder.Core", "PredicateBuilder.Core\PredicateBuilder.Core.csproj", "{DA86B8CF-02DF-4455-BDD7-932847562812}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA86B8CF-02DF-4455-BDD7-932847562812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA86B8CF-02DF-4455-BDD7-932847562812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA86B8CF-02DF-4455-BDD7-932847562812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA86B8CF-02DF-4455-BDD7-932847562812}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
