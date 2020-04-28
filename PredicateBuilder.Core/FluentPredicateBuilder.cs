@@ -46,13 +46,15 @@ namespace PredicateBuilder
 
         public IFluentPredicateBuilder<T> AndGroup(Action<IFluentPredicateBuilderInitial<T>> build)
         {
-            throw new NotImplementedException();
+            var predicate = CreateGroup(build);
+            AddPredicate(predicate, PredicateCombinator.And);
             return this;
         }
 
         public IFluentPredicateBuilder<T> OrGroup(Action<IFluentPredicateBuilderInitial<T>> build)
         {
-            throw new NotImplementedException();
+            var predicate = CreateGroup(build);
+            AddPredicate(predicate, PredicateCombinator.Or);
             return this;
         }
 
