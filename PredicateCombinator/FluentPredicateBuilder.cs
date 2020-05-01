@@ -46,7 +46,7 @@ namespace PredicateCombinator
             }
             else
             {
-                _tree = new PredicatePredicateTree<T>(_tree.Combinator.LogicalInverse(),_tree);
+                _tree = new PredicatePredicateTree<T>(_tree.Combinator.LogicalComplement(),_tree);
                 _tree.AddPredicate(new StatementTree<T>(predicate));
             }
         }

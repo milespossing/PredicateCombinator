@@ -4,7 +4,7 @@ namespace PredicateCombinator.Internal
 {
     static class ExtensionMethods
     {
-        public static PredicateCombinator LogicalInverse(this PredicateCombinator combinator)
+        public static PredicateCombinator LogicalComplement(this PredicateCombinator combinator)
         {
             switch (combinator)
             {
