@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PredicateBuilder
+﻿namespace PredicateCombinator
 {
     public class PredicateBuilder<T> : IPredicateBuilder<T>
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq.Expressions;
-using PredicateBuilder.Internal;
+using PredicateCombinator.Internal;
 
-namespace PredicateBuilder
+namespace PredicateCombinator
 {
     public class FluentPredicateBuilder<T> : IFluentPredicateBuilderInitial<T>, IFluentPredicateBuilder<T>
     {
@@ -10,7 +10,7 @@ namespace PredicateBuilder
 
         public FluentPredicateBuilder()
         {
-            _tree = new PredicatePredicateTree<T>(PredicateCombinator.And);
+            _tree = new PredicatePredicateTree<T>(Internal.PredicateCombinator.And);
         }
 
         public IFluentPredicateBuilder<T> WithPredicate(Func<T,bool> predicate)
@@ -19,19 +19,26 @@ namespace PredicateBuilder
             return this;
         }
 
+        public IFluentPredicateBuilder<T> WithGroup(Action<IFluentPredicateBuilderInitial<T>> build)
+        {
+            var predicate = CreateGroup(build);
+            _tree.AddPredicate(new StatementTree<T>(predicate));
+            return this;
+        }
+
         public IFluentPredicateBuilder<T> And(Func<T,bool> predicate)
         {
-            AddPredicate(predicate, PredicateCombinator.And);
+            AddPredicate(predicate, Internal.PredicateCombinator.And);
             return this;
         }
 
         public IFluentPredicateBuilder<T> Or(Func<T,bool> predicate)
         {
-            AddPredicate(predicate, PredicateCombinator.Or);
+            AddPredicate(predicate, Internal.PredicateCombinator.Or);
             return this;
         }
 
-        private void AddPredicate(Func<T, bool> predicate, PredicateCombinator combinator)
+        private void AddPredicate(Func<T, bool> predicate, Internal.PredicateCombinator combinator)
         {
             if (_tree.Combinator == combinator)
             {
@@ -39,7 +46,7 @@ namespace PredicateBuilder
             }
             else
             {
-                _tree = new PredicatePredicateTree<T>(_tree.Combinator.Reverse(),_tree);
+                _tree = new PredicatePredicateTree<T>(_tree.Combinator.LogicalInverse(),_tree);
                 _tree.AddPredicate(new StatementTree<T>(predicate));
             }
         }
@@ -47,14 +54,14 @@ namespace PredicateBuilder
         public IFluentPredicateBuilder<T> AndGroup(Action<IFluentPredicateBuilderInitial<T>> build)
         {
             var predicate = CreateGroup(build);
-            AddPredicate(predicate, PredicateCombinator.And);
+            AddPredicate(predicate, Internal.PredicateCombinator.And);
             return this;
         }
 
         public IFluentPredicateBuilder<T> OrGroup(Action<IFluentPredicateBuilderInitial<T>> build)
         {
             var predicate = CreateGroup(build);
-            AddPredicate(predicate, PredicateCombinator.Or);
+            AddPredicate(predicate, Internal.PredicateCombinator.Or);
             return this;
         }
 
@@ -73,11 +80,6 @@ namespace PredicateBuilder
         public Predicate<T> AsPredicate()
         {
             return t => _tree.Build()(t);
-        }
-
-        public Expression<Func<T, bool>> AsExpression()
-        {
-            throw new NotImplementedException();
         }
     }
 }

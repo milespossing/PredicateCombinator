@@ -1,11 +1,15 @@
 ﻿using System;
 
-namespace PredicateBuilder.Internal
+namespace PredicateCombinator.Internal
 {
-    interface IPredicateTree<T>
+    interface IPredicateBranch<T>
+    {
+        Func<T, bool> Build();
+    }
+    
+    interface IPredicateTree<T> : IPredicateBranch<T>
     {
         PredicateCombinator Combinator { get; }
-        void AddPredicate(IPredicateTree<T> predicate);
-        Func<T, bool> Build();
+        void AddPredicate(IPredicateBranch<T> predicate);
     }
 }

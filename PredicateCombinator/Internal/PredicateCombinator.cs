@@ -1,4 +1,4 @@
-﻿namespace PredicateBuilder
+﻿namespace PredicateCombinator.Internal
 {
     enum PredicateCombinator
     {

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace PredicateBuilder
+namespace PredicateCombinator
 {
     public interface IFluentPredicateBuilderInitial<T>
     {
         IFluentPredicateBuilder<T> WithPredicate(Func<T,bool> predicate);
+        IFluentPredicateBuilder<T> WithGroup(Action<IFluentPredicateBuilderInitial<T>> build);
     }
 
     public interface IFluentPredicateBuilder<T>

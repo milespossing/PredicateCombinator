@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace PredicateBuilder.Internal
+namespace PredicateCombinator.Internal
 {
     static class ExtensionMethods
     {
-        public static PredicateCombinator Reverse(this PredicateCombinator combinator)
+        public static PredicateCombinator LogicalInverse(this PredicateCombinator combinator)
         {
             switch (combinator)
             {

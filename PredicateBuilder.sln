@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateBuilder.Console", "PredicateBuilder.Console\PredicateBuilder.Console.csproj", "{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateCombinator.Test", "PredicateCombinator.Test\PredicateCombinator.Test.csproj", "{36BEBB12-18C7-4520-9027-177437924F8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateCombinator", "PredicateCombinator\PredicateCombinator.csproj", "{DA86B8CF-02DF-4455-BDD7-932847562812}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateCombinator", "PredicateCombinator\PredicateCombinator.csproj", "{66D20D2B-6C15-49F5-9FF3-934B0B395478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F29B2CA0-BE86-410B-B0FA-372D16E5F28D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA86B8CF-02DF-4455-BDD7-932847562812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA86B8CF-02DF-4455-BDD7-932847562812}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA86B8CF-02DF-4455-BDD7-932847562812}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA86B8CF-02DF-4455-BDD7-932847562812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36BEBB12-18C7-4520-9027-177437924F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36BEBB12-18C7-4520-9027-177437924F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36BEBB12-18C7-4520-9027-177437924F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36BEBB12-18C7-4520-9027-177437924F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D20D2B-6C15-49F5-9FF3-934B0B395478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D20D2B-6C15-49F5-9FF3-934B0B395478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D20D2B-6C15-49F5-9FF3-934B0B395478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D20D2B-6C15-49F5-9FF3-934B0B395478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

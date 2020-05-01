@@ -1,4 +1,4 @@
-﻿namespace PredicateBuilder
+﻿namespace PredicateCombinator
 {
     public interface IPredicateBuilder<T>
     {

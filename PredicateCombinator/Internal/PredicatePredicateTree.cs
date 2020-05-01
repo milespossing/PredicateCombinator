@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PredicateBuilder.Internal
+namespace PredicateCombinator.Internal
 {
     class PredicatePredicateTree<T> : IPredicateTree<T>
     {
-        private List<IPredicateTree<T>> _children = new List<IPredicateTree<T>>();
+        private List<IPredicateBranch<T>> _children = new List<IPredicateBranch<T>>();
         
         public PredicatePredicateTree(PredicateCombinator combinator)
         {
@@ -19,7 +19,7 @@ namespace PredicateBuilder.Internal
         }
         
         public PredicateCombinator Combinator { get; }
-        public void AddPredicate(IPredicateTree<T> predicate)
+        public void AddPredicate(IPredicateBranch<T> predicate)
         {
             _children.Add(predicate);
         }
