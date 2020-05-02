@@ -2,7 +2,7 @@
 {
     public class PredicateBuilder<T> : IPredicateBuilder<T>
     {
-        public IFluentPredicateBuilderInitial<T> BuildPredicate()
+        public IFluentPredicateBuilderInitial<T> Build()
         {
             return new FluentPredicateBuilder<T>();
         }

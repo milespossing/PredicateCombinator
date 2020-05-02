@@ -2,6 +2,6 @@
 {
     public interface IPredicateBuilder<T>
     {
-        IFluentPredicateBuilderInitial<T> BuildPredicate();
+        IFluentPredicateBuilderInitial<T> Build();
     }
 }
